@@ -7,4 +7,13 @@
 
 import SwiftUI
 
-NavigationLink(destination: VerbView())
+struct NounView: View {
+    @State var MadLibNoun = ""
+    var body: some View {
+        VStack{
+          TextField("Enter Noun Here", text: $MadLibNoun)
+        }
+        NavigationLink(VerbView, value: $VerbView)
+    }
+}
+
