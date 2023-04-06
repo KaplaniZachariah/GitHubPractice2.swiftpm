@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
-
 struct VerbView: View {
+    @Binding var MadLib: MadLib
     var body: some View {
-        NavigationLink(AdjectiveView, value: $AdjectiveView)
+        
+        TextField("Enter Verb Here", text: $VerbView)
+        
+        NavigationLink(destination: AdjectiveView())
     }
 }
